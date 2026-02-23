@@ -28,6 +28,9 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -76,7 +79,7 @@
     </header>
 
     <!-- HERO -->
-    <section id="inicio" class="min-h-screen flex items-center justify-center px-6 text-center relative pt-24 lg:pt-0"
+    <section id="inicio" class="min-h-screen flex items-center justify-center px-6 text-center relative pt-24 lg:pt-30"
         role="region" aria-label="Hero section">
         <div class="blob" aria-hidden="true"></div>
         <div class="max-w-7xl w-full relative z-10">
@@ -93,8 +96,8 @@
                         </span>
                     </div>
 
-                    <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-6 fade-up"
-                        style="animation-delay:.1s">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 fade-up"
+                        style="animation-delay:.1s; line-height: 1.2;">
                         <span>Impulsamos tu</span> <br class="hidden md:block" />
                         <span class="hero-gradient block">Proyecto Digital</span>
                     </h1>
@@ -128,24 +131,24 @@
                         </a>
                     </div>
 
-                    <div class="grid grid-cols-3 gap-6 w-full max-w-sm" data-aos="fade-up" data-aos-delay="220"
+                    <div class="grid grid-cols-3 gap-6 w-full max-w-2xl" data-aos="fade-up" data-aos-delay="220"
                         role="region" aria-label="Stats">
                         <article class="group hover:translate-y-1 transition-transform">
                             <p
                                 class="text-3xl lg:text-4xl font-black bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                                10+</p>
+                                +10</p>
                             <p class="text-gray-400 text-sm mt-2 group-hover:text-gray-300">Clientes Activos</p>
                         </article>
                         <article class="group hover:translate-y-1 transition-transform">
                             <p
                                 class="text-3xl lg:text-4xl font-black bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                                25+</p>
+                                +25</p>
                             <p class="text-gray-400 text-sm mt-2 group-hover:text-gray-300">Proyectos</p>
                         </article>
                         <article class="group hover:translate-y-1 transition-transform">
                             <p
                                 class="text-3xl lg:text-4xl font-black bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                                99%</p>
+                                99.9%</p>
                             <p class="text-gray-400 text-sm mt-2 group-hover:text-gray-300">Satisfacción</p>
                         </article>
                     </div>
@@ -246,56 +249,75 @@
 
     <!-- SERVICES PREVIEW -->
     <section id="services" class="py-20 px-6 max-w-7xl mx-auto" role="region" aria-label="Services section">
-        <h3 class="text-3xl md:text-4xl font-extrabold text-center mb-12" data-aos="fade-up">Servicios Destacados</h3>
+        <div class="text-center mb-16">
+            <p class="text-purple-400 font-semibold text-sm mb-3" data-aos="fade-up">Nuestras Soluciones</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4" data-aos="fade-up" data-aos-delay="100">
+                Servicios <span class="hero-gradient">Especializados</span>
+            </h2>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Soluciones premium diseñadas para potenciar tu comunidad digital
+            </p>
+        </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="card-glow glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-glow glass rounded-2xl p-8 group hover:border-purple-500/30 border border-white/5 transition-colors duration-300"
+                data-aos="fade-up" data-aos-delay="0">
+                <div
+                    class="bg-gradient-to-br from-purple-500/20 to-purple-600/10 w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:from-purple-500/40 transition-colors">
+                    <i class="fab fa-discord text-purple-400" style="font-size: 28px;"></i>
+                </div>
                 <h4 class="text-xl font-bold mb-3">Discord Setup</h4>
-                <p class="text-gray-300">Configuración profesional, roles, canales y automatizaciones diseñadas para
-                    comunidad activa.</p>
-                <ul class="text-sm text-gray-400 mt-4 space-y-1">
-                    <li>• Tickets personalizados</li>
-                    <li>• Integraciones y moderación</li>
-                    <li>• Sistemas automatizados</li>
-                    <li>• Y más...</li>
+                <p class="text-gray-300 mb-6">Configuración profesional, roles, canales y automatizaciones diseñadas
+                    para comunidades activas y escalables.</p>
+                <ul class="text-sm text-gray-400 space-y-2 mb-6">
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Tickets personalizados</li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Integraciones y moderación
+                    </li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Sistemas automatizados</li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Support 24/7</li>
                 </ul>
             </div>
 
-            <div class="card-glow glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="150">
+            <div class="card-glow glass rounded-2xl p-8 group hover:border-cyan-500/30 border border-white/5 transition-colors duration-300"
+                data-aos="fade-up" data-aos-delay="150">
+                <div
+                    class="bg-gradient-to-br from-cyan-500/20 to-cyan-600/10 w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:from-cyan-500/40 transition-colors">
+                    <i class="fas fa-cube text-cyan-400" style="font-size: 28px;"></i>
+                </div>
                 <h4 class="text-xl font-bold mb-3">Minecraft Setup</h4>
-                <p class="text-gray-300">Servidores optimizados, plugins personalizados y experiencia única para tu
-                    comunidad.</p>
-                <ul class="text-sm text-gray-400 mt-4 space-y-1">
-                    <li>• Rendimiento y seguridad</li>
-                    <li>• Menús & GUIs</li>
-                    <li>• NPCs & Rangos</li>
-                    <li>• Y más...</li>
+                <p class="text-gray-300 mb-6">Servidores optimizados, plugins personalizados y experiencia única para tu
+                    comunidad gaming.</p>
+                <ul class="text-sm text-gray-400 space-y-2 mb-6">
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Rendimiento optimizado</li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Menús & GUIs personalizados
+                    </li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> NPCs & Sistemas de Rangos
+                    </li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Anti-cheat incluido</li>
                 </ul>
             </div>
 
-            <div class="card-glow glass rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
-                <h4 class="text-xl font-bold mb-3">Bots & Systems</h4>
-                <p class="text-gray-300">Bots personalizados y soluciones a medida que automatizan y escalan tu
+            <div class="card-glow glass rounded-2xl p-8 group hover:border-purple-500/30 border border-white/5 transition-colors duration-300"
+                data-aos="fade-up" data-aos-delay="300">
+                <div
+                    class="bg-gradient-to-br from-purple-500/20 to-purple-600/10 w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:from-purple-500/40 transition-colors">
+                    <i class="fas fa-robot text-purple-400" style="font-size: 28px;"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-3">Discord Bots</h4>
+                <p class="text-gray-300 mb-6">Bots personalizados y soluciones inteligentes que automatizan y escalan tu
                     comunidad.</p>
-                <ul class="text-sm text-gray-400 mt-4 space-y-1">
-                    <li>• Bots con panel</li>
-                    <li>• Integraciones API</li>
-                    <li>• Monitoreo</li>
-                    <li>• Y más...</li>
+                <ul class="text-sm text-gray-400 space-y-2 mb-6">
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Bots hechos a medida</li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Sistemas avanzados
+                    </li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Mantenimiento y soporte
+                    </li>
+                    <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Automatizaciones
+                        sofisticadas</li>
                 </ul>
             </div>
         </div>
     </section>
-
-    <!-- SCROLL TO TOP BUTTON -->
-    <button id="scrollTopBtn"
-        class="fixed bottom-8 right-8 bg-gradient-to-r from-purple-600 to-cyan-400 text-black p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500"
-        aria-label="Scroll to top" title="Back to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-    </button>
 
     <!-- FOOTER -->
     <footer class="border-t border-white/10 py-10 text-center text-gray-400" data-aos="fade-up" role="contentinfo">

@@ -169,17 +169,6 @@ body {
     width: 100%;
 }
 
-/* Scroll to top button animations */
-#scrollTopBtn {
-    pointer-events: none;
-}
-
-#scrollTopBtn.visible {
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto;
-}
-
 /* Smooth transitions for all links and buttons */
 a,
 button {

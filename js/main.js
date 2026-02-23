@@ -55,26 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', updateActiveNav);
 
-    // Scroll to top button
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-
-    if (scrollTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-        });
-
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-
     // Smooth scroll para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -95,9 +75,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Animated counter for stats
     function animateCounter(element, target, duration = 2000) {
         const targetText = target.toString();
-        const numberMatch = targetText.match(/\d+/);
-        const suffix = targetText.replace(/\d+/g, '');
-        const targetNumber = numberMatch ? parseInt(numberMatch[0]) : 0;
+        const numberMatch = targetText.match(/[\d.]+/);
+        const targetNumber = numberMatch ? parseFloat(numberMatch[0]) : 0;
+
+        // Extract prefix (like +) and suffix (like %)
+        const prefix = targetText.substring(0, targetText.indexOf(numberMatch[0]));
+        const suffix = targetText.substring(targetText.indexOf(numberMatch[0]) + numberMatch[0].length);
 
         const startValue = 0;
         let startTime = null;
@@ -108,7 +91,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (progress < 1) {
                 const value = Math.floor(startValue + (targetNumber - startValue) * progress);
-                element.textContent = value + suffix;
+                // Check if target has decimals (like 99.9%)
+                const isDecimal = targetText.includes('.');
+                const displayValue = isDecimal ? (value + (targetNumber - value) * progress).toFixed(1) : value;
+                element.textContent = prefix + displayValue + suffix;
                 requestAnimationFrame(update);
             } else {
                 element.textContent = targetText;
